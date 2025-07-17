@@ -498,7 +498,7 @@ export default function Home() {
           
           addLog(`✓ Analysis complete for ${url}`);
 
-          return { url, analysis, structuredData };
+          return { url, analysis, structuredData: structuredData || undefined };
         } catch (error) {
           const errorMsg = error instanceof Error ? error.message : 'Unknown error';
           addLog(`✗ Error processing ${url}: ${errorMsg}`);
